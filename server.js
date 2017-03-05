@@ -2,6 +2,7 @@ var express = require('express')
 var path = require('path')
 var moment = require('moment')
 var app = express()
+var port = process.env.PORT || 8080
 
 app.use('/', express.static(path.join(__dirname, '')));
 
@@ -23,6 +24,6 @@ app.get('/:time', function (req, res) {
   
 })
 
-app.listen(8080, function () {
+app.listen(port, function () {
   console.log('Example app listening on port 8080!')
 })
